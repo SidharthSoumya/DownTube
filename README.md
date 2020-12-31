@@ -1,6 +1,10 @@
 # DownTube
 The application downloads Youtube videos from the given link with the desirable format & size.
 
+## Library Used
+- tkinter
+- pytube@10.0.0
+
 ## Usage
 * Open the executable file from the dist folder
 * Copy the link of video from [Youtube](https://www.youtube.com/)
