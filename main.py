@@ -1,6 +1,7 @@
 # This is a sample Python script.
 import tkinter as tk
 import subprocess
+import os
 
 from pytube import YouTube
 
@@ -56,9 +57,10 @@ def save_video(videos, number):
     wait_msg.pack()
     print('Index', number)
     vid = videos[number-1]
-    dest = str(r'C:\Users\haPPy\Videos')
+    # dest = str(r'C:\Users\haPPy\Videos')
+    dest = os.getcwd()
     vid.download(dest)
-    subprocess.Popen(r'explorer /select,"C:\Users\haPPy\Videos\Captures"')
+    # subprocess.Popen(dest)
     msg = tk.Label(root, text='The Video has been successfully downloaded', background="white",
                    foreground="green", width=100, height=2)
     # wait_msg.pack_forget()
